@@ -5,7 +5,7 @@ export default async function palindrome (req, res) {
 
     if (cleanParameter === '') {
       res.status(400).json({ text: 'no text' })
-      return;
+      return
     }
 
     const lowerCase = cleanParameter.toLowerCase()
