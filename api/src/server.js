@@ -10,7 +10,7 @@ app.use(cors())
 
 const port = 3000
 
-app.route('/palindrome').get(palindrome)
+app.route('/iecho').get(palindrome)
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
 export default { app }
