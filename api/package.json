@@ -4,12 +4,18 @@
   "description": "text string reverser and palindrome detector",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "test": "node src/tests/api.test.js"
+    "start": "node -r esm src/server",
+    "dev": "npx standard --fix && nodemon --exec babel-node src/server",
+    "test": "mocha -r esm src/tests/api.test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nedagarmo/PalindromeDetector.git"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   },
   "keywords": [
     "palindrome",
@@ -26,5 +32,22 @@
   "bugs": {
     "url": "https://github.com/nedagarmo/PalindromeDetector/issues"
   },
-  "homepage": "https://github.com/nedagarmo/PalindromeDetector#readme"
+  "homepage": "https://github.com/nedagarmo/PalindromeDetector#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3",
+    "supertest": "^6.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  }
 }
