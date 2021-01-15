@@ -1,0 +1,14 @@
+version: '3'  
+services:
+  palindrome-backend:
+    image: palindrome-backend-image
+    container_name: palindrome-backend-container
+    build: 
+      context: ./
+    ports:  
+      - "3000:3000"
+    networks:
+      - palindrome_network
+networks:
+  palindrome_network:
+     external: true
