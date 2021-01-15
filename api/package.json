@@ -1,0 +1,30 @@
+{
+  "name": "palindrome",
+  "version": "1.0.0",
+  "description": "text string reverser and palindrome detector",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node src/tests/api.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nedagarmo/PalindromeDetector.git"
+  },
+  "keywords": [
+    "palindrome",
+    "palindromo",
+    "detector",
+    "reversor",
+    "string",
+    "inversor",
+    "cadena",
+    "texto"
+  ],
+  "author": "Nelson Garzón",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nedagarmo/PalindromeDetector/issues"
+  },
+  "homepage": "https://github.com/nedagarmo/PalindromeDetector#readme"
+}
