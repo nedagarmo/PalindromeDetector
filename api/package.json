@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node -r esm src/server",
     "dev": "npx standard --fix && nodemon --exec babel-node src/server",
-    "test": "mocha -r esm src/tests/api.test"
+    "test": "mocha -r esm src/tests/api.test --exit"
   },
   "repository": {
     "type": "git",
