@@ -17,4 +17,4 @@ El comando buscará el archivo docker-compose.yml que describe la configuración
 - **Backend: http://localhost:8000**
 
 ## Despliegue manual
-Para verificar el funcionamiento de la aplicación web manualmente, se podrá acceder a la carpeta ```api``` y ```front``` para ejecutar en cada una el comando ```npm start```.  Para este modo de ejecución, el contenedor del backend escuchará por el puerto ```3000``` por lo que se deberá seguir el punto ```1``` de la sección anterior, de manera que se cambie el número de puerto de la URL del archivo ```{DIR_PROJECT}/front/src/reducers/palíndromeSlice.jsx```.
+Para verificar el funcionamiento de la aplicación web manualmente, se podrá acceder a la carpeta ```api``` y ```front``` para ejecutar en cada una el comando ```npm start```.  Para este modo de ejecución, el nodo backend escuchará por el puerto ```3000``` por lo que se deberá seguir el punto ```1``` de la sección anterior, de manera que se cambie el número de puerto de la URL del archivo ```{DIR_PROJECT}/front/src/reducers/palíndromeSlice.jsx```.
