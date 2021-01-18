@@ -1,10 +1,19 @@
 version: '3'  
 services:
+  palindrome-frontend:
+    image: palindrome-frontend-image
+    container_name: palindrome-frontend-container
+    build: 
+      context: ./front/
+    ports:  
+      - "7000:3000"
+    networks:
+      - palindrome_network
   palindrome-backend:
     image: palindrome-backend-image
     container_name: palindrome-backend-container
     build: 
-      context: ./
+      context: ./api/
     ports:  
       - "8000:3000"
     networks:
