@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { list } from '../../reducers/palindromeSlice';
 
+// eslint-disable-next-line no-unused-vars
 import styles from './History.css'
 
 const History = () => {

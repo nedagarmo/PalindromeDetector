@@ -1,10 +1,13 @@
 FROM node:12.20.1-buster as node
 
+ARG CI=true
 WORKDIR /app
 COPY ./ /app/
 
 # Instala y construye las dependencias con npm
 RUN npm i
+# Ejecutamos los tests.
+RUN npm test
 # Compilamos la aplicación
 RUN npm run build
 
