@@ -2,12 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { list } from '../../reducers/palindromeSlice';
 
-import styles from './History.css'
+import styles from './History.module.css'
 
 const History = () => {
   const palindromeList = useSelector(list).slice().reverse().map((item, i) => {
     let palindrome = item.palindrome ? (<code className="float-right">Palindrome!</code>) : null;
-    return (<span className="list-group-item">{item.text} {palindrome}</span>);
+    return (<span className="list-group-item" key={i}>{item.text} {palindrome}</span>);
   });
   return (
     <React.Fragment>

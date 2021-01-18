@@ -7,9 +7,6 @@ export const palindromeSlice = createSlice({
     list: [],
   },
   reducers: {
-    get: state => {
-      return state.list;
-    },
     add: (state, action) => {
       state.list.push(action.payload);
     },

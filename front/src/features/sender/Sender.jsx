@@ -2,9 +2,20 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { process } from '../../reducers/palindromeSlice';
 
+
 const Sender = () => {
   const dispatch = useDispatch();
   const [textString, setTextString] = useState('');
+
+  const handleSendText = e => {
+    e.preventDefault();
+    if (!textString.trim()) {
+      return;
+    }
+    
+    dispatch(process(textString || ""));
+    setTextString('');
+  }
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-danger static-top">
@@ -20,15 +31,7 @@ const Sender = () => {
                 aria-label="Insert Text" />
               <button 
                 className="btn btn-primary my-2 my-sm-0 px-4"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (!textString.trim()) {
-                    return;
-                  }
-                  
-                  dispatch(process(textString || ""));
-                  setTextString('');
-                }}>Send</button>
+                onClick={handleSendText}>Send</button>
             </form>
           </div>
         </div>
