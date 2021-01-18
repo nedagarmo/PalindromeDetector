@@ -6,7 +6,7 @@ services:
     build: 
       context: ./front/
     ports:  
-      - "7000:3000"
+      - "7000:80"
     networks:
       - palindrome_network
   palindrome-backend:
