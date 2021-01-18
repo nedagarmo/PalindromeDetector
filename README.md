@@ -3,7 +3,7 @@ Pequeña aplicación web construida con Node.js y React que invierte la cadena d
 
 ## Despliegue con [docker-compose](https://docs.docker.com/compose/)
 1. Para llevar a cabo el despliegue con docker, primero debe verificar que los puertos asignados para la aplicación están disponibles en la computadora o servidor donde se implementarán los contenedores.  Los puertos que utilizarán los servicios son: _Contenedor Frontend -> Puerto 7000,_ _Contenedor Backend -> Puerto 8000._  Un eventual cambio en el puerto de ejecución del servicio Frontend se tendrá que tener en cuenta al momento de acceder a la URL de la aplicación web.  El formato de URL corresponde a http://ip-server:port-number, por ejemplo:
-```http://localhost:7000```.  Sin embargo, si el cambio de puerto se realiza en el servicio del backend que por defecto escucha por el 8000, antes del despliegue con docker-compose se debe editar el archivo del proyecto {DIR_PROJECT}/front/src/reducers/palíndromeSlice.jsx y reemplazar el número de puerto en la URL ubicada en la línea 19 del archivo.
+```http://localhost:7000```.  Sin embargo, si el cambio de puerto se realiza en el servicio del backend que por defecto escucha por el 8000, antes del despliegue con docker-compose, se debe editar el archivo del proyecto {DIR_PROJECT}/front/src/reducers/palíndromeSlice.jsx y reemplazar el número de puerto en la URL ubicada en la línea 19 del archivo.
 
 2. Luego de la verificación de los puertos disponibles requeridos por el sistema software web, cree la network de docker para el proyecto mediante el siguiente comando: 
 ```docker network create palindrome_network```
